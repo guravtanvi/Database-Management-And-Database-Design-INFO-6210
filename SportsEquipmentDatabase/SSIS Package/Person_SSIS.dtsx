@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/28/2019 6:25:22 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-E69LE2F"
+  DTS:CreatorName="DESKTOP-E69LE2F\Pankaj Gorav"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{E059FF0D-D25E-4AAE-997C-359D43B4CFA1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1301.438"
+  DTS:LocaleID="16393"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="Person_SSIS"
+  DTS:VersionGUID="{CACC5B17-A714-4705-AA6C-17D7B0C292D8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4026F9F6-5FCD-4185-B95B-6E3C4AE36EE7}"
+      DTS:ObjectName="DestinationConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Pankaj Gorav\Documents\Lastest SSIS Package\Person.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonID"
+              DTS:DTSID="{01D3F49D-E3A9-4556-9C4D-7F63E4F45C72}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonName"
+              DTS:DTSID="{DFFF9467-9D02-4207-AC08-AB53A157CACF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonEmail"
+              DTS:DTSID="{2C60C23B-3371-4CE5-81AE-5A66F193618F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonContact"
+              DTS:DTSID="{1DEEB60C-54F5-4BE2-853D-1193465B3344}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonAddress"
+              DTS:DTSID="{98443546-C918-47AE-999A-C3A61DCC6947}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonDOB"
+              DTS:DTSID="{2A58CC5F-1457-44A9-AD8C-437960C1641E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonGender"
+              DTS:DTSID="{CDD5087C-DB20-4BFE-9F88-992184AB46CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PersonType"
+              DTS:DTSID="{1380298D-E2A7-48D0-AF0C-F504DBD1549A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{42675E71-5C4D-4AA7-ABFA-4A12C1765A97}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=localhost;Initial Catalog=SportsEquipmentDB_New;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DTSID="{5C08E954-299D-45AC-A611-1FBAF9A48642}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - Person_csv"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Destination - Person_csv"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - Person_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="20"
+                      cachedName="PersonID"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="PersonName"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonName]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonEmail]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="PersonEmail"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonEmail]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonEmail]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonContact]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="PersonContact"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonContact]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonContact]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonAddress]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PersonAddress"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonAddress]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonAddress]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonDOB]"
+                      cachedDataType="dbDate"
+                      cachedName="PersonDOB"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonDOB]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonDOB]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonGender]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="PersonGender"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonGender]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonGender]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].Columns[PersonType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="PersonType"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonType]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonType]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PersonName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonEmail]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PersonEmail" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonContact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PersonContact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PersonAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonDOB]"
+                      dataType="dbDate"
+                      name="PersonDOB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonGender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="PersonGender" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input].ExternalColumns[PersonType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PersonType" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - Person"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - Person"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Person]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - Person.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonID]"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonID]"
+                      name="PersonID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonName]"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonName]"
+                      name="PersonName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonEmail]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonEmail]"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonEmail]"
+                      name="PersonEmail"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonContact]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonContact]"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonContact]"
+                      name="PersonContact"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonAddress]"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonAddress]"
+                      name="PersonAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonDOB]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonDOB]"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonDOB]"
+                      name="PersonDOB"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonGender]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonGender]"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonGender]"
+                      name="PersonGender"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonType]"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].Columns[PersonType]"
+                      name="PersonType"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      name="PersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PersonName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonEmail]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PersonEmail" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonContact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="PersonContact" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PersonAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonDOB]"
+                      dataType="dbDate"
+                      name="PersonDOB" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonGender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="PersonGender" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output].ExternalColumns[PersonType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="PersonType" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="20"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonID]"
+                      name="PersonID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonName]"
+                      name="PersonName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonEmail]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonEmail]"
+                      name="PersonEmail" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonContact]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonContact]"
+                      name="PersonContact" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonAddress]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonAddress]"
+                      name="PersonAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonDOB]"
+                      dataType="dbDate"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonDOB]"
+                      name="PersonDOB" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonGender]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonGender]"
+                      name="PersonGender" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[PersonType]"
+                      name="PersonType" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - Person_csv.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - Person.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+</DTS:Executable>
