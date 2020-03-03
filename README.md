@@ -13,6 +13,9 @@ needs with ease. There are many problems a customer faces while purchasing a pro
 to locate the product and purchase it more conveniently. It will help the business figure out the
 popular products and brands thus helping them build an effective marketing strategy.
 ### Mission Statement/Objectives
+
+![ObjectModel](https://github.com/guravtanvi/Database-Management-And-Database-Design/blob/master/ProposedSolutionDMDD.PNG)
+
 1. A detailed database will help the customer look for the product he wants and can see
 the availability in the branch.
 2. Locating the product in the store and also browse through similar products.
@@ -25,3 +28,7 @@ inventory control due to centralized database
 accordingly
 7. Based on the demand of the product, supply management from the vendors can be
 efficiently done.
+
+### Entity-Relationship Diagram
+
+![ObjectModel](https://github.com/guravtanvi/Database-Management-And-Database-Design/blob/master/Final_ERD.png)
