@@ -1,8 +1,8 @@
 
 
 
-## Sports Equipment Management System
-### Background
+# Sports Equipment Management System
+## Background
 Sports equipment management system has to deal with large amounts of data since there is vast
 diversification in sports. Hence, sports equipment management system helps to cope with this
 diversity by streamlining the availability of the product. The management has to maintain data
@@ -11,7 +11,7 @@ needs with ease. There are many problems a customer faces while purchasing a pro
 (availability, location, stock, etc.). A detailed database about the system will allow the customer
 to locate the product and purchase it more conveniently. It will help the business figure out the
 popular products and brands thus helping them build an effective marketing strategy.
-### Mission Statement/Objectives
+## Mission Statement/Objectives
 
 ![ObjectModel](https://github.com/guravtanvi/Database-Management-And-Database-Design/blob/master/ProposedSolutionDMDD.PNG)
 
@@ -28,6 +28,6 @@ accordingly
 7. Based on the demand of the product, supply management from the vendors can be
 efficiently done.
 
-### Entity-Relationship Diagram
+## Entity-Relationship Diagram
 
 ![ObjectModel](https://github.com/guravtanvi/Database-Management-And-Database-Design/blob/master/Final_ERD.png)
