@@ -1,5 +1,4 @@
-# Database-Management-And-Database-Design
-A database project which depicts database theory and skills, including database concepts, architecture, and deployment in a user-centered system context using SQL. Managing, manipulating and analyzing large amounts of data, related to the relational data model, the database system lifecycle (including entity-relationship diagramming and normalization), SQL programming, security and privacy issues, as well as principles of transaction management.
+
 
 
 ## Sports Equipment Management System
