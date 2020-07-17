@@ -13,7 +13,7 @@ to locate the product and purchase it more conveniently. It will help the busine
 popular products and brands thus helping them build an effective marketing strategy.
 ## Mission Statement/Objectives
 
-![Image](https://github.com/guravtanvi/Database-Management-And-Database-Design/blob/master/ProposedSolutionDMDD.PNG)
+![Image](ProposedSolutionDMDD.PNG)
 
 1. A detailed database will help the customer look for the product he wants and can see
 the availability in the branch.
@@ -30,4 +30,4 @@ efficiently done.
 
 ## Entity-Relationship Diagram
 
-![Image](https://github.com/guravtanvi/Database-Management-And-Database-Design/blob/master/Final_ERD.png)
+![Image](Final_ERD.png)
